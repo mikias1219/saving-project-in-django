@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Payment as Paid</title>
+</head>
+<body>
+    <h2>Mark Payment as Paid</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount">
+        <button type="submit">Mark as Paid</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Savings</title>
+</head>
+<body>
+    <h2>Monthly Savings</h2>
+    <!-- Display savings details -->
+    <table>
+        <tr>
+            <th>Month</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+        {% for saving in savings %}
+        <tr>
+            <td>{{ saving.month }}</td>
+            <td>{{ saving.amount }}</td>
+            <td>{% if saving.is_paid %}Paid{% else %}Not Paid{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <!-- Total Savings Button -->
+    <form action="{% url 'total_savings' %}" method="get">
+        <button type="submit">Total Savings</button>
+    </form>
+</body>
+</html>

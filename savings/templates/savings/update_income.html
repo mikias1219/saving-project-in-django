@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Monthly Income</title>
+</head>
+<body>
+    <h2>Update Monthly Income</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="income">Monthly Income:</label>
+        <input type="text" id="income" name="income" value="{{ member.monthly_income }}">
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
